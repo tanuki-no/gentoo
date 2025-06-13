@@ -3,7 +3,7 @@
 
 EAPI=8
 
-PYTHON_COMPAT=( python3_{10..14} )
+PYTHON_COMPAT=( python3_{10..13} )
 
 inherit meson python-r1 xdg-utils
 
@@ -30,9 +30,11 @@ BDEPEND="
 src_prepare() {
 	default
 
-	# Avoid building & testing plugin - it must NOT be multi-python as gst-inspect will map in all libpython.so versions and crash or behave mysteriously.
-	# Python plugin support is of limited use (GIL gets in the way). If it's ever requested or needed, it should be a
-	# separate python-single-r1 media-plugins/gst-plugins-python package that only builds the plugin directory.
+	# Avoid building & testing plugin - it must NOT be multi-python as gst-inspect
+	# will map in all libpython.so versions and crash or behave mysteriously.
+	# Python plugin support is of limited use (GIL gets in the way). If it's ever
+	# requested or needed, it should be a separate python-single-r1
+	# media-plugins/gst-plugins-python package that only builds the plugin directory.
 	sed -e '/subdir.*plugin/d' -i meson.build || die
 	sed -e '/test_plugin.py/d' -i testsuite/meson.build || die
 
