@@ -1,0 +1,13 @@
+Replace default prefix
+
+--- a/GNUmakefile
++++ b/GNUmakefile
+@@ -5,7 +5,7 @@
+ DATE_EPOCH = LC_ALL=C date $(shell date -d @0 > /dev/null 2>&1 && echo "-d @" || echo "-r ")
+ SOURCE_DATE_EPOCH ?= $(shell git log -1 --no-show-signature --format=%at "netstat-nat.1.in")
+ MANUAL_DATE ?= $(shell $(DATE_EPOCH)$(SOURCE_DATE_EPOCH) +"%B %e, %Y")
+-PREFIX ?= /usr/local
++PREFIX ?= /usr
+ 
+ 
+ CPPFLAGS += -D_GNU_SOURCE
