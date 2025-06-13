@@ -7,7 +7,7 @@ GST_ORG_MODULE=gst-plugins-bad
 inherit gstreamer-meson
 
 DESCRIPTION="H.265 decoder plugin for GStreamer"
-KEYWORDS="~amd64 ~arm64 ~x86"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
 RDEPEND=">=media-libs/libde265-0.9[${MULTILIB_USEDEP}]"
 DEPEND="${RDEPEND}"
