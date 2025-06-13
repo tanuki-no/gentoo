@@ -9,7 +9,7 @@ inherit gstreamer-meson rust
 
 DESCRIPTION="Open source multimedia framework"
 HOMEPAGE="https://gstreamer.freedesktop.org/"
-SRC_URI="https://${PN}.freedesktop.org/src/${PN}/${P}.tar.xz"
+SRC_URI="https://gitlab.freedesktop.org/${PN}/${PN}/-/archive/${PV}/${P}.tar.bz2"
 
 LICENSE="LGPL-2+"
 SLOT="1.0"
@@ -36,7 +36,7 @@ BDEPEND="
 DOCS=( AUTHORS ChangeLog NEWS MAINTAINERS README.md RELEASE )
 
 PATCHES=(
-	"${FILESDIR}"/gstreamer-1.24.10-disable-test-with-no-tools.patch
+#	"${FILESDIR}"/gstreamer-1.24.10-disable-test-with-no-tools.patch
 )
 
 # Rust
