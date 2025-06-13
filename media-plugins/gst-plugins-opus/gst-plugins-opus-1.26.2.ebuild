@@ -7,7 +7,6 @@ GST_ORG_MODULE=gst-plugins-base
 inherit gstreamer-meson
 
 DESCRIPTION="Opus audio parser plugin for GStreamer"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
 COMMON_DEPEND=">=media-libs/opus-1.1:=[${MULTILIB_USEDEP}]"
 
@@ -22,23 +21,20 @@ src_prepare() {
 		audio_dep:gstreamer-audio \
 		pbutils_dep:gstreamer-pbutils \
 		tag_dep:gstreamer-tag
+
+	pushd "${WORKDIR}/gst-plugins-bad-${PV}"
+	/usr/bin/patch -Np1 --input "${FILESDIR}"/0001-meson_fix_building-bad_tests_with_disabled_soundtouch.patch
+	popd
 }
 
 # Everything below is for building opusparse from gst-plugins-bad. Once it moves into -base, all below can be removed
 SRC_URI+=" https://gstreamer.freedesktop.org/src/gst-plugins-bad/gst-plugins-bad-${PV}.tar.${GST_TARBALL_SUFFIX}"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~mips ~ppc ~ppc64 ~riscv ~sparc ~x86"
 
 in_bdir() {
 	pushd "${BUILD_DIR}" || die
 	"$@"
 	popd || die
-}
-
-src_prepare() {
-	default
-	# This one is ugly. Don`t shoot the entertainer, he plays his best :)
-	pushd "${WORKDIR}/gst-plugins-bad-${PV}"
-	/usr/bin/patch -Np1 --input "${FILESDIR}"/0001-meson_fix_building-bad_tests_with_disabled_soundtouch.patch
-	popd
 }
 
 src_configure() {
