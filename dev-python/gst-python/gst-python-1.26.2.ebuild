@@ -13,13 +13,12 @@ SRC_URI="https://gstreamer.freedesktop.org/src/${PN}/${P}.tar.xz"
 
 LICENSE="LGPL-2+"
 SLOT="1.0"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~x86 ~amd64-linux ~x86-linux"
+KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86 ~amd64-linux ~x86-linux"
 REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 
 RDEPEND="${PYTHON_DEPS}
 	>=media-libs/gstreamer-${PV}:1.0[introspection]
 	>=media-libs/gst-plugins-base-${PV}:1.0[introspection]
-	>=media-libs/gst-rtsp-server-${PV}:1.0[introspection]
 	>=dev-python/pygobject-3.8:3[${PYTHON_USEDEP}]
 "
 DEPEND="${RDEPEND}"
