@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE pkgmetadata SYSTEM "https://www.gentoo.org/dtd/metadata.dtd">
+<pkgmetadata>
+	<longdescription>
+    LibML is a library for loading, configuring, and running machine learning
+	models in production. It provides a simple high-level API for C++ applications.
+	LibML uses TensorFlow with XNNPACK acceleration for low latency inference.
+
+	This library is the part of SNORT3 project.
+	</longdescription>
+	<use>
+		<flag name="static-libs">Build static library</flag>
+	</use>
+	<upstream>
+		<remote-id type="github">snort3/libml</remote-id>
+	</upstream>
+</pkgmetadata>
