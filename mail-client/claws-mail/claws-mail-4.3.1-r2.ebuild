@@ -46,7 +46,7 @@ COMMONDEPEND="${NOTIFICATIONDEPEND}
 	net-mail/ytnef
 	virtual/zlib:=
 	x11-libs/cairo
-	x11-libs/gdk-pixbuf:2[jpeg]
+	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
 	x11-libs/gtk+:3
 	x11-libs/libX11
 	x11-libs/pango

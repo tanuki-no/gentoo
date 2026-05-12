@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -33,7 +33,7 @@ COMMONDEPEND="
 	net-mail/ytnef
 	virtual/zlib:=
 	x11-libs/cairo
-	x11-libs/gdk-pixbuf:2[jpeg]
+	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
 	x11-libs/gtk+:2
 	x11-libs/libX11
 	x11-libs/pango
