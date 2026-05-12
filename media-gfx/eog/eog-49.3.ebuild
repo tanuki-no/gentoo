@@ -25,7 +25,7 @@ RDEPEND="
 	>=gnome-base/gnome-desktop-2.91.2:3=
 	>=gnome-base/gsettings-desktop-schemas-42_beta
 	>=x11-misc/shared-mime-info-0.20
-	>=x11-libs/gdk-pixbuf-2.36.5:2[jpeg?,tiff?]
+	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg?,tiff?]
 	>=x11-libs/gtk+-3.24.15:3[introspection,X]
 	>=gui-libs/libhandy-1.5.0:1
 	virtual/zlib:=
