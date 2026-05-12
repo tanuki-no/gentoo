@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -25,7 +25,7 @@ COMMON_DEPEND="
 	>=mate-base/mate-desktop-$(ver_cut 1-2)
 	virtual/zlib:=
 	x11-libs/cairo
-	>=x11-libs/gdk-pixbuf-2.36.5:2[introspection?,jpeg?,tiff?]
+	<x11-libs/gdk-pixbuf-2.44.6:2[introspection?,jpeg?,tiff?]
 	>=x11-libs/gtk+-3.22:3[introspection?]
 	x11-libs/libX11
 	>=x11-misc/shared-mime-info-0.20
