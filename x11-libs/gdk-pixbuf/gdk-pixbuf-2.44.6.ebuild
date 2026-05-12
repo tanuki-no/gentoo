@@ -10,11 +10,13 @@ HOMEPAGE="https://gitlab.gnome.org/GNOME/gdk-pixbuf"
 
 LICENSE="LGPL-2.1+"
 SLOT="2"
-KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~x64-macos ~x64-solaris"
+# KEYWORDS="~alpha ~amd64 ~arm ~arm64 ~hppa ~loong ~m68k ~mips ~ppc ~ppc64 ~riscv ~s390 ~sparc ~x86 ~arm64-macos ~x64-macos ~x64-solaris"
+KEYWORDS="~amd64 ~arm64 ~m68k ~arm64-macos ~x64-macos ~x64-solaris"
 IUSE="gtk-doc +introspection heif jpegxl +svg test"
 RESTRICT="!test? ( test )"
 
 # TODO: For windows/darwin support: shared-mime-info conditional, native_windows_loaders option review
+#	>=media-libs/glycin-loaders-2.0.11:2[heif?,jpegxl?,svg?]
 RDEPEND="
 	>=dev-libs/glib-2.56.0:2[${MULTILIB_USEDEP}]
 	x11-misc/shared-mime-info
