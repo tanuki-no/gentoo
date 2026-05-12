@@ -13,7 +13,7 @@ if [[ ${PV} = "9999" ]]; then
 	EGIT_REPO_URI="https://github.com/csete/gpredict.git"
 else
 	SRC_URI="https://github.com/csete/gpredict/releases/download/v${PV}/${P}.tar.bz2"
-	KEYWORDS="~amd64 ~ppc ~x86"
+	KEYWORDS="~amd64 ~x86"
 fi
 
 LICENSE="GPL-2"
@@ -22,7 +22,7 @@ SLOT="0"
 RDEPEND="
 	dev-libs/glib:2
 	sci-geosciences/gpsd:=
-	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
+	>=x11-libs/gdk-pixbuf-2.44.6:2[jpegxl]
 	x11-libs/gtk+:3
 	x11-libs/goocanvas:3.0
 	net-misc/curl

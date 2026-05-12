@@ -21,7 +21,7 @@ SLOT="0"
 
 RDEPEND="
 	dev-libs/glib:2
-	x11-libs/gdk-pixbuf[jpeg]
+	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
 	x11-libs/gtk+:3
 	x11-libs/goocanvas:3.0
 	net-misc/curl
