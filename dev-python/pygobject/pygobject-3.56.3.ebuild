@@ -36,7 +36,7 @@ DEPEND="
 	test? (
 		>=app-accessibility/at-spi2-core-2.46.0[introspection]
 		dev-python/pytest[${PYTHON_USEDEP}]
-		x11-libs/gdk-pixbuf:2[introspection,jpeg]
+		<x11-libs/gdk-pixbuf-2.44.6:2[introspection,jpeg]
 		x11-libs/gtk+:3[introspection]
 		x11-libs/pango[introspection]
 	)

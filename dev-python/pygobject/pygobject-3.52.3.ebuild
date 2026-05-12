@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -40,7 +40,7 @@ DEPEND="
 	test? (
 		>=app-accessibility/at-spi2-core-2.46.0[introspection]
 		dev-python/pytest[${PYTHON_USEDEP}]
-		x11-libs/gdk-pixbuf:2[introspection,jpeg]
+		<x11-libs/gdk-pixbuf-2.44.6:2[introspection,jpeg]
 		x11-libs/gtk+:3[introspection]
 		x11-libs/pango[introspection]
 	)

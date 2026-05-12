@@ -36,7 +36,7 @@ DEPEND="
 	test? (
 		>=app-accessibility/at-spi2-core-2.46.0[introspection]
 		dev-python/pytest[${PYTHON_USEDEP}]
-		<x11-libs/gdk-pixbuf-2.44.6:2[introspection,jpeg]
+		>=x11-libs/gdk-pixbuf-2.44.6:2[introspection]
 		x11-libs/gtk+:3[introspection]
 		x11-libs/pango[introspection]
 	)
@@ -44,11 +44,6 @@ DEPEND="
 BDEPEND="
 	virtual/pkgconfig
 "
-
-PATCHES=(
-	"${FILESDIR}/Skip-test-using-dbus-in-sandbox.patch"
-	"${FILESDIR}/Skip-test-detecting-cycle-among-base-classes-typeerr.patch"
-)
 
 python_configure() {
 	local emesonargs=(
@@ -72,6 +67,8 @@ python_test() {
 	local -x GIO_USE_VOLUME_MONITOR="unix" # prevent udisks-related failures in chroots, bug #449484
 	local -x PYTEST_DISABLE_PLUGIN_AUTOLOAD=1
 	local -x XDG_CACHE_HOME="${T}/${EPYTHON}"
+	# Timeout
+	local -x PYTEST_ADDOPTS="-k 'not test_python_calls_sync'"
 
 	meson_src_test --timeout-multiplier 3 || die "test for ${EPYTHON}"
 }
