@@ -10,7 +10,7 @@ HOMEPAGE="https://wiki.gnome.org/Apps/Cheese"
 
 LICENSE="GPL-2+"
 SLOT="0/8" # subslot = libcheese soname version
-KEYWORDS="amd64 ~arm arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc x86"
+KEYWORDS="~amd64 ~arm ~arm64 ~loong ~ppc ~ppc64 ~riscv ~sparc ~x86"
 IUSE="gtk-doc +introspection test"
 RESTRICT="!test? ( test )"
 
@@ -18,7 +18,7 @@ DEPEND="
 	>=media-libs/clutter-1.13.2:1.0[introspection?]
 	media-libs/clutter-gst:3.0
 	>=media-libs/clutter-gtk-0.91.8:1.0
-	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg,introspection?]
+	>=x11-libs/gdk-pixbuf-2.44.6:2[jpegxl,introspection?]
 	>=dev-libs/glib-2.39.90:2
 	>=gnome-base/gnome-desktop-2.91.6:3=
 	>=media-libs/gstreamer-1.4:1.0[introspection?]
