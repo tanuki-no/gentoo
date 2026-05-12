@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -27,7 +27,7 @@ RDEPEND="app-arch/libarchive:=
 	dev-libs/girara:=
 	dev-libs/glib:2
 	x11-libs/cairo
-	x11-libs/gdk-pixbuf:2[jpeg]
+	>=x11-libs/gdk-pixbuf-2.44.6:2
 	x11-libs/gtk+:3"
 
 DEPEND="${RDEPEND}
