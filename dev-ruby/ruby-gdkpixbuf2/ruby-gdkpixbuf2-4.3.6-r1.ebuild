@@ -16,7 +16,7 @@ KEYWORDS="~amd64 ~ppc ~riscv ~x86"
 IUSE="test"
 
 DEPEND="test? (
-	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg,gif(+)]
+	>=x11-libs/gdk-pixbuf-2.44.6:2
 	)"
 RDEPEND="x11-libs/gdk-pixbuf[introspection]"
 
