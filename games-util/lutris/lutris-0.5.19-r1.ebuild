@@ -57,7 +57,7 @@ RDEPEND="
 	x11-apps/xgamma
 	x11-apps/xrandr
 	x11-libs/gtk+:3[introspection]
-	x11-libs/gdk-pixbuf[jpeg]
+	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
 "
 
 BDEPEND="
