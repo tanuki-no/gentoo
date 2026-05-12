@@ -313,7 +313,7 @@ BDEPEND="
 # sys-crates in pycargoebuild order
 DEPEND="
 	x11-libs/cairo[X?]
-	<x11-libs/gdk-pixbuf-2.44.6:2[gif?,jpeg?,tiff?]
+	>=x11-libs/gdk-pixbuf-2.44.6:2
 	dev-libs/glib:2
 	sys-devel/gettext
 	media-libs/graphene
