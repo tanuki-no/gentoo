@@ -25,7 +25,7 @@ RDEPEND="
 		dev-perl/Gtk3
 		dev-perl/File-ShareDir
 		virtual/freedesktop-icon-theme
-		<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
+		>=x11-libs/gdk-pixbuf-2.44.6:2[jpegxl]
 	)
 	|| ( media-video/ffmpeg[openssl] media-video/ffmpeg[gnutls] )
 	|| ( media-video/mpv media-video/mplayer media-video/vlc gtk? ( media-video/smplayer ) )"

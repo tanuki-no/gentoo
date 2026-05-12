@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -8,7 +8,6 @@ inherit desktop optfeature perl-module git-r3 xdg-utils
 
 DESCRIPTION="A command line utility for viewing youtube-videos in Mplayer"
 HOMEPAGE="https://github.com/trizen/youtube-viewer"
-SRC_URI=""
 EGIT_REPO_URI="https://github.com/trizen/${PN}.git"
 
 LICENSE="|| ( Artistic-2 GPL-1+ )"
@@ -26,7 +25,7 @@ RDEPEND="
 		dev-perl/Gtk3
 		dev-perl/File-ShareDir
 		virtual/freedesktop-icon-theme
-		x11-libs/gdk-pixbuf:2[jpeg]
+		>=x11-libs/gdk-pixbuf-2.44.6:2[jpegxl]
 	)
 	|| ( media-video/ffmpeg[openssl] media-video/ffmpeg[gnutls] )
 	|| ( media-video/mpv media-video/mplayer media-video/vlc gtk? ( media-video/smplayer ) )"
