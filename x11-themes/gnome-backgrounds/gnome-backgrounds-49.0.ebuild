@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -14,6 +14,6 @@ KEYWORDS="~amd64 ~arm ~arm64 ~loong ~riscv ~x86"
 RDEPEND="
 	media-libs/libjxl[gdk-pixbuf]
 	gnome-base/librsvg
-	x11-libs/gdk-pixbuf[jpeg]
+	<x11-libs/gdk-pixbuf-2.44.6[jpeg]
 "
 BDEPEND=">=sys-devel/gettext-0.19.8"
