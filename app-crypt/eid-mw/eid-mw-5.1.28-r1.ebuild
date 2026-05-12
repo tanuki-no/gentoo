@@ -16,7 +16,7 @@ IUSE="+dialogs +gtk p11-kit"
 
 RDEPEND="sys-apps/pcsc-lite
 	gtk? (
-		<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
+		>=x11-libs/gdk-pixbuf-2.44.6:2
 		x11-libs/gtk+:3
 		dev-libs/libxml2:=
 		net-misc/curl[ssl]

@@ -1,4 +1,4 @@
-# Copyright 1999-2024 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -15,7 +15,7 @@ IUSE="+dialogs +gtk p11-kit"
 
 RDEPEND="sys-apps/pcsc-lite
 	gtk? (
-		x11-libs/gdk-pixbuf[jpeg]
+		>=x11-libs/gdk-pixbuf-2.44.6:2
 		x11-libs/gtk+:3
 		dev-libs/libxml2:=
 		net-misc/curl[ssl]
