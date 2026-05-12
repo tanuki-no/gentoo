@@ -13,7 +13,7 @@ SRC_URI="https://github.com/mypaint/${PN}/releases/download/v${PV}/${P}.tar.xz"
 
 LICENSE="GPL-2"
 SLOT="0"
-KEYWORDS="amd64 ~arm64 x86"
+KEYWORDS="~amd64 ~arm64 ~x86"
 IUSE="openmp"
 LANGS="cs de en_CA en_GB es fr hu id it ja ko nb nn_NO pl pt_BR ro ru sl sv uk zh_CN zh_TW"
 # Relies on setup.py test (long-removed) and nose (also long-removed)
@@ -24,7 +24,7 @@ REQUIRED_USE="${PYTHON_REQUIRED_USE}"
 RDEPEND="
 	${PYTHON_DEPS}
 	$(python_gen_cond_dep '
-		dev-python/pygobject:3[${PYTHON_USEDEP}]
+		>=dev-python/pygobject-3.52:3[${PYTHON_USEDEP}]
 		dev-python/numpy[${PYTHON_USEDEP}]
 		>=dev-python/pycairo-1.4[${PYTHON_USEDEP}]
 		dev-python/protobuf[${PYTHON_USEDEP}]
@@ -37,7 +37,7 @@ RDEPEND="
 	media-libs/libpng:=
 	sys-devel/gettext
 	llvm-runtimes/openmp
-	<x11-libs/gdk-pixbuf-2.44.6:2[jpeg]
+	>=x11-libs/gdk-pixbuf-2.44.6:2[jpegxl]
 	x11-libs/gtk+:3
 "
 DEPEND="${RDEPEND}"
@@ -57,6 +57,7 @@ PATCHES=(
 	"${FILESDIR}"/${P}-setuptools.patch
 	"${FILESDIR}"/${PN}-2.0.1-python3.11.patch
 	"${FILESDIR}"/${PN}-2.0.1-numpy-2.patch
+	"${FILESDIR}"/${PN}-2.0.1-pygobject-3.52.patch
 )
 
 pkg_pretend() {
