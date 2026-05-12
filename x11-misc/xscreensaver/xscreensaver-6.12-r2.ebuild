@@ -1,4 +1,4 @@
-# Copyright 1999-2025 Gentoo Authors
+# Copyright 1999-2026 Gentoo Authors
 # Distributed under the terms of the GNU General Public License v2
 
 EAPI=8
@@ -48,7 +48,7 @@ COMMON_DEPEND="
 	x11-libs/libXt
 	x11-libs/libXxf86vm
 	elogind? ( sys-auth/elogind )
-	gdk-pixbuf? ( >=x11-libs/gdk-pixbuf-2.42.0:2[jpeg?] )
+	gdk-pixbuf? ( <x11-libs/gdk-pixbuf-2.44.6:2[jpeg?] )
 	gtk? ( >=x11-libs/gtk+-3.0.0:3 )
 	ffmpeg? ( >=media-video/ffmpeg-6.1:= )
 	jpeg? ( media-libs/libjpeg-turbo:= )

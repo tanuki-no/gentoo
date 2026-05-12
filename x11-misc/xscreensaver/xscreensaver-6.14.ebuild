@@ -49,7 +49,7 @@ COMMON_DEPEND="
 	virtual/glu
 	virtual/opengl
 	elogind? ( sys-auth/elogind )
-	gdk-pixbuf? ( >=x11-libs/gdk-pixbuf-2.42.0:2[jpeg?] )
+	gdk-pixbuf? ( <x11-libs/gdk-pixbuf-2.44.6:2[jpeg?] )
 	gtk? ( >=x11-libs/gtk+-3.0.0:3[X,wayland?] )
 	ffmpeg? ( >=media-video/ffmpeg-6.1:= )
 	jpeg? ( media-libs/libjpeg-turbo:= )
