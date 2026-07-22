@@ -273,6 +273,7 @@ pkg_postinst() {
 		elog
 	fi
 
+	optfeature "PipeWire audio capture" media-plugins/obs-pipewire-audio-capture
 	optfeature "VA-API hardware encoding" media-video/ffmpeg[vaapi]
 	optfeature "virtual camera support" media-video/v4l2loopback
 }
