@@ -48,8 +48,8 @@ SRC_URI+="
 LICENSE="Boost-1.0 GPL-2+ MIT Unlicense"
 SLOT="0"
 IUSE="
-	+alsa browser decklink fdk jack lua mpegts nvenc pipewire pulseaudio
-	python qsv sndio speex test-input truetype v4l vlc wayland websocket
+	+alsa browser decklink fdk jack lua mpegts nvenc pulseaudio python
+	qsv screencast sndio speex test-input truetype v4l vlc wayland websocket
 "
 REQUIRED_USE="
 	browser? ( || ( alsa pulseaudio ) )
@@ -120,10 +120,10 @@ DEPEND="
 		net-libs/srt
 	)
 	nvenc? ( >=media-libs/nv-codec-headers-12 )
-	pipewire? ( media-video/pipewire:= )
 	pulseaudio? ( media-libs/libpulse )
 	python? ( ${PYTHON_DEPS} )
 	qsv? ( media-libs/libvpl )
+	screencast? ( media-video/pipewire:= )
 	sndio? ( media-sound/sndio )
 	speex? ( media-libs/speexdsp )
 	truetype? (
@@ -204,7 +204,7 @@ src_configure() {
 		-DENABLE_LIBFDK=$(usex fdk)
 		-DENABLE_NEW_MPEGTS_OUTPUT=$(usex mpegts)
 		-DENABLE_NVENC=$(usex nvenc)
-		-DENABLE_PIPEWIRE=$(usex pipewire)
+		-DENABLE_PIPEWIRE=$(usex screencast)
 		-DENABLE_PULSEAUDIO=$(usex pulseaudio)
 		-DENABLE_QSV11=$(usex qsv)
 		-DENABLE_RNNOISE=ON
